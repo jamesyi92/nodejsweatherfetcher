@@ -9,7 +9,7 @@ const ctrl = (function () {
     const loader = document.querySelector('.loader');
         loader.style.display = 'flex';
 
-    fetch(`http://localhost:3000/weather?address=${term}`).then((response) => {
+    fetch(`/weather?address=${term}`).then((response) => {
       response.json()
         .then(({location = '', forecastMsg = '', error = ''}) => {
           if(error) {
