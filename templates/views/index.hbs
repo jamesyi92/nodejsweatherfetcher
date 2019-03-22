@@ -1,0 +1,27 @@
+{{>header}}
+	<section>
+		<div class="container">
+			<div class="row mb-3">
+				<div class="col-md-12">
+					<h1>{{ title }}</h1>
+				</div>
+			</div>
+			<div class="row justify-content-start">
+				<div class="col-md-8">
+					<form id="weatherForm" class="form-inline">
+					  <div class="form-group mr-3 mb-2">
+					    <input type="text" class="form-control" id="cityInput" placeholder="Please enter a city">
+					  </div>
+					  <button type="submit" class="btn btn-primary mb-2">Get Weather</button>
+					</form>
+					<div class="loader">
+						<div class="donut mr-3"></div>
+						<p class="mb-0">Fetching Data.. Please Wait</p>
+					</div>
+					<h5 class="mt-3 mb-3" id="locationMsg"></h5>
+					<h5 class="mt-3 mb-3" id="forecastMsg"></h5>
+				</div>
+			</div>
+		</div>
+	</section>
+{{>footer}}
