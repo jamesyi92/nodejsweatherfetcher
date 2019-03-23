@@ -22,7 +22,7 @@ const forecast = (lat, long, cb) => {
     } else if(body.error) {
       cb('Please enter the correct coordinates', undefined);
     } else {
-      const data = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is ${body.currently.precipProbability}% chance of rain.`;
+      const data = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is ${body.currently.precipProbability}% chance of rain. The wind bearing is ${body.currently.windBearing}`;
       cb(undefined, data);
     }
 
